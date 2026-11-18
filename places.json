@@ -1,0 +1,311 @@
+{
+ "days": [
+  {
+   "d": 2,
+   "en": "Wed",
+   "zh": "周三"
+  },
+  {
+   "d": 3,
+   "en": "Thu",
+   "zh": "周四"
+  },
+  {
+   "d": 4,
+   "en": "Fri",
+   "zh": "周五"
+  },
+  {
+   "d": 5,
+   "en": "Sat",
+   "zh": "周六"
+  },
+  {
+   "d": 6,
+   "en": "Sun",
+   "zh": "周日"
+  },
+  {
+   "d": 7,
+   "en": "Mon",
+   "zh": "周一"
+  },
+  {
+   "d": 8,
+   "en": "Tue",
+   "zh": "周二"
+  },
+  {
+   "d": 9,
+   "en": "Wed",
+   "zh": "周三"
+  },
+  {
+   "d": 10,
+   "en": "Thu",
+   "zh": "周四"
+  }
+ ],
+ "places": [
+  {
+   "slug": "taikooli",
+   "day": 2,
+   "name": "Taikoo Li Sanlitun",
+   "name_cn": "三里屯太古里",
+   "area": "北京 · 朝阳",
+   "why": "落地第一站：露天街区逛店拍照，晚上就在隔壁喝酒。",
+   "kind": "place",
+   "cost": "免费"
+  },
+  {
+   "slug": "skp-s",
+   "day": 2,
+   "name": "SKP-S",
+   "name_cn": "北京SKP-S",
+   "area": "北京 · 朝阳",
+   "why": "把商场做成火星艺术装置，拍照很好看，就在太古里旁边。",
+   "kind": "place",
+   "cost": "免费"
+  },
+  {
+   "slug": "duck",
+   "day": 2,
+   "name": "Peking duck dinner",
+   "name_cn": "北京烤鸭",
+   "area": "北京 · 朝阳",
+   "why": "第一晚正式吃一顿，8 人提前订位。",
+   "kind": "food",
+   "cost": "约 ¥130/人"
+  },
+  {
+   "slug": "sanlitun-bars",
+   "day": 2,
+   "name": "Sanlitun bars",
+   "name_cn": "三里屯酒吧街",
+   "area": "北京 · 朝阳",
+   "why": "走回酒店路上随便挑，不用订。",
+   "kind": "activity",
+   "cost": "自理"
+  },
+  {
+   "slug": "universal",
+   "day": 3,
+   "name": "Universal Beijing Resort",
+   "name_cn": "北京环球影城",
+   "area": "北京 · 通州",
+   "why": "哈利波特、侏罗纪、霸天虎过山车，一整天。",
+   "kind": "place",
+   "cost": "¥418（平日）"
+  },
+  {
+   "slug": "guijie",
+   "day": 3,
+   "name": "Guijie late supper",
+   "name_cn": "簋街",
+   "area": "北京 · 东城",
+   "why": "环球影城回来后的深夜宵夜一条街，小龙虾和烤鱼。",
+   "kind": "food",
+   "cost": "约 ¥80/人"
+  },
+  {
+   "slug": "gugong",
+   "day": 4,
+   "name": "Forbidden City",
+   "name_cn": "故宫博物院",
+   "area": "北京 · 东城",
+   "why": "周五去，人比周末少一半；门票 7 天前早上 7 点放，要抢。",
+   "kind": "place",
+   "cost": "¥40（冬季）"
+  },
+  {
+   "slug": "jingshan",
+   "day": 4,
+   "name": "Jingshan Park",
+   "name_cn": "景山公园",
+   "area": "北京 · 东城",
+   "why": "从故宫北门出来，爬 15 分钟拍屋顶全景。",
+   "kind": "place",
+   "cost": "¥2"
+  },
+  {
+   "slug": "shichahai",
+   "day": 4,
+   "name": "Shichahai",
+   "name_cn": "什刹海",
+   "area": "北京 · 西城",
+   "why": "湖 + 胡同，没有车，走走拍拍。",
+   "kind": "place",
+   "cost": "免费"
+  },
+  {
+   "slug": "nanluoguxiang",
+   "day": 4,
+   "name": "Nanluoguxiang",
+   "name_cn": "南锣鼓巷",
+   "area": "北京 · 东城",
+   "why": "小吃和手作小店，顺路逛。",
+   "kind": "place",
+   "cost": "免费"
+  },
+  {
+   "slug": "hotpot",
+   "day": 4,
+   "name": "Copper-pot lamb hotpot",
+   "name_cn": "铜锅涮肉",
+   "area": "北京 · 西城",
+   "why": "北京冬天该吃的东西，8 人要包间。",
+   "kind": "food",
+   "cost": "约 ¥140/人"
+  },
+  {
+   "slug": "escape",
+   "day": 4,
+   "name": "Script murder / escape room",
+   "name_cn": "剧本杀",
+   "area": "北京 · 东城",
+   "why": "8 人刚好一局，提前预约主题。",
+   "kind": "activity",
+   "cost": "约 ¥150/人"
+  },
+  {
+   "slug": "mutianyu",
+   "day": 5,
+   "name": "Mutianyu Great Wall",
+   "name_cn": "慕田峪长城",
+   "area": "北京 · 怀柔",
+   "why": "缆车上、滑道下；7 点出发避开大巴团。",
+   "kind": "place",
+   "cost": "¥295（含缆车滑道）"
+  },
+  {
+   "slug": "798",
+   "day": 5,
+   "name": "798 Art District",
+   "name_cn": "798艺术区",
+   "area": "北京 · 朝阳",
+   "why": "回程顺路，画廊 18:00 关门。",
+   "kind": "place",
+   "cost": "免费"
+  },
+  {
+   "slug": "qinghe",
+   "day": 6,
+   "name": "Beijing Qinghe Station",
+   "name_cn": "北京清河站",
+   "area": "北京 · 海淀",
+   "why": "08:00 高铁去崇礼，提前 30 分钟到。",
+   "kind": "transit",
+   "cost": "¥74–99"
+  },
+  {
+   "slug": "taizicheng",
+   "day": 6,
+   "name": "Taizicheng Station",
+   "name_cn": "太子城站",
+   "area": "崇礼",
+   "why": "下车有免费接驳车到雪场。",
+   "kind": "transit",
+   "cost": "免费接驳"
+  },
+  {
+   "slug": "thaiwoo",
+   "day": 6,
+   "name": "Thaiwoo Ski Resort",
+   "name_cn": "太舞滑雪小镇",
+   "area": "崇礼",
+   "why": "住这里：初级道最宽、小镇能走，ski-in / ski-out。",
+   "kind": "place",
+   "cost": "住宿约 ¥1,000/间"
+  },
+  {
+   "slug": "ski1",
+   "day": 6,
+   "name": "Ski session 1 (4 h)",
+   "name_cn": "第一天滑雪",
+   "area": "崇礼 · 太舞",
+   "why": "下午 4 小时先熟雪，装备现场租（滑雪包不能上高铁）。",
+   "kind": "activity",
+   "cost": "约 ¥368"
+  },
+  {
+   "slug": "ski2",
+   "day": 7,
+   "name": "Ski day + lesson",
+   "name_cn": "全天滑雪 + 教练",
+   "area": "崇礼 · 太舞",
+   "why": "第一天跟 2 小时团课，剩下自己滑。",
+   "kind": "activity",
+   "cost": "约 ¥470 + 教练 ¥350"
+  },
+  {
+   "slug": "genting",
+   "day": 7,
+   "name": "Genting night ski",
+   "name_cn": "密苑云顶夜场",
+   "area": "崇礼 · 云顶",
+   "why": "这里唯一开夜场、雪道有灯，晚上去滑一趟。",
+   "kind": "activity",
+   "cost": "约 ¥248"
+  },
+  {
+   "slug": "ski3",
+   "day": 8,
+   "name": "Ski session 3 (4 h)",
+   "name_cn": "第三天滑雪",
+   "area": "崇礼 · 太舞",
+   "why": "早上滑半天，中午退房坐高铁回北京。",
+   "kind": "activity",
+   "cost": "约 ¥266"
+  },
+  {
+   "slug": "wangfujing",
+   "day": 8,
+   "name": "Wangfujing",
+   "name_cn": "王府井",
+   "area": "北京 · 东城",
+   "why": "回北京当晚逛街吃饭，离第二间酒店近。",
+   "kind": "place",
+   "cost": "免费"
+  },
+  {
+   "slug": "yonghegong",
+   "day": 9,
+   "name": "Lama Temple",
+   "name_cn": "雍和宫",
+   "area": "北京 · 东城",
+   "why": "藏传佛教寺院，冬天香火和雪景都好拍。",
+   "kind": "place",
+   "cost": "¥25"
+  },
+  {
+   "slug": "wudaoying",
+   "day": 9,
+   "name": "Wudaoying Hutong",
+   "name_cn": "五道营胡同",
+   "area": "北京 · 东城",
+   "why": "雍和宫对面，咖啡馆和小店，最后一天慢慢走。",
+   "kind": "place",
+   "cost": "免费"
+  },
+  {
+   "slug": "farewell",
+   "day": 9,
+   "name": "Farewell dinner",
+   "name_cn": "散伙饭",
+   "area": "北京 · 东城",
+   "why": "最后一晚好好吃一顿，订包间。",
+   "kind": "food",
+   "cost": "约 ¥150/人"
+  },
+  {
+   "slug": "tiantan",
+   "day": 10,
+   "name": "Temple of Heaven",
+   "name_cn": "天坛",
+   "area": "北京 · 东城",
+   "why": "早上逛完，13:00 前到机场。",
+   "kind": "place",
+   "cost": "¥34（冬季）"
+  }
+ ]
+}

@@ -1,113 +1,583 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beijing × Chongli · 2–10 Dec 2026</title>
-<meta name="description" content="Trip plan for 8 people: 2–5 Dec Beijing, 6–8 Dec Chongli, 8–10 Dec Beijing. Itinerary, photos and budget.">
-<meta property="og:title" content="Beijing × Chongli · 2–10 Dec 2026">
-<meta property="og:description" content="9 days, 8 people, 3 ski sessions. Itinerary, photos and budget.">
-<meta property="og:image" content="pages/page-1.jpg">
-<meta property="og:type" content="website">
+<title>北京 × 崇礼 · 2–10 Dec 2026 · 投票排期</title>
+<meta name="description" content="9 天 8 人北京 + 崇礼滑雪行程。投票、加地点、留言、把地点排到某一天。">
+<meta property="og:title" content="北京 × 崇礼 · 2–10 Dec 2026">
+<meta property="og:description" content="9 天 8 人 · 3 场滑雪 · 一起投票排期">
+<meta property="og:image" content="hero.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❄️</text></svg>">
 <style>
-  :root { --ink:#1b1b1b; --muted:#6f6f6f; --accent:#B03A0B; --cream:#FAF7F2; --line:#e8e4dd; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:#f3efe9; color:var(--ink);
-         font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
-         line-height:1.55; -webkit-font-smoothing:antialiased; }
-  .wrap { max-width:820px; margin:0 auto; padding:0 16px 56px; }
-  header { background:#0f1c22; color:#fff; margin:0 -16px 0; padding:34px 24px 26px; position:relative; overflow:hidden; }
-  header img.bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-  header .shade { position:absolute; inset:0; background:linear-gradient(180deg,rgba(9,16,20,.42) 0%,rgba(9,16,20,.72) 46%,rgba(9,16,20,.95) 100%); }
-  header .in { position:relative; max-width:788px; margin:0 auto; }
-  .kicker { font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#ffb08a; font-weight:700; }
-  h1 { font-size:30px; line-height:1.1; margin:10px 0 6px; letter-spacing:-.02em; }
-  h1 span { display:block; font-size:17px; color:#ffb08a; letter-spacing:.06em; margin-top:6px; }
-  header p { margin:0; color:#dcd8d3; font-size:14px; }
-  .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:22px; }
-  .stats div { background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.2); border-radius:10px; padding:10px 12px;
-               backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); }
-  .stats b { display:block; font-size:16px; letter-spacing:-.01em; white-space:nowrap; }
-  .stats small { font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:#bcb6ae; }
-  .btn { display:flex; align-items:center; justify-content:center; gap:9px; background:var(--accent); color:#fff;
-         text-decoration:none; font-weight:700; font-size:15px; padding:14px 18px; border-radius:11px; margin:18px 0 4px; }
-  .btn:active { transform:translateY(1px); }
-  .btn.ghost { background:#fff; color:var(--ink); border:1.5px solid var(--line); }
-  .note { font-size:12px; color:var(--muted); text-align:center; margin:8px 0 0; }
-  h2 { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin:32px 0 12px; font-weight:800; }
-  .days { background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
-  .day { display:grid; grid-template-columns:64px 1fr; gap:12px; padding:13px 16px; border-bottom:1px solid var(--line); }
-  .day:last-child { border-bottom:none; }
-  .day .d { font-size:11px; font-weight:800; letter-spacing:.05em; color:var(--accent); text-transform:uppercase; padding-top:2px; }
-  .day .t { font-size:14.5px; }
-  .day .t b { display:block; font-size:15px; margin-bottom:1px; }
-  .day .t span { color:var(--muted); font-size:12.5px; }
-  figure { margin:0 0 14px; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; }
-  figure a { display:block; }
-  figure img { display:block; width:100%; height:auto; }
-  figure figcaption { font-size:11.5px; color:var(--muted); padding:8px 12px; letter-spacing:.04em; text-transform:uppercase; }
-  .box { background:#fff; border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:8px; padding:14px 16px; font-size:14px; margin-bottom:12px; }
-  .box b { color:var(--accent); }
-  .box.teal { border-left-color:#12433f; background:#f2f8f6; }
-  .box.teal b { color:#12433f; }
-  footer { font-size:11.5px; color:var(--muted); margin-top:30px; border-top:1px solid var(--line); padding-top:16px; }
-  footer a { color:var(--muted); }
+  :root{
+    --ink:#1b1b1b; --muted:#7a746d; --accent:#B03A0B; --accent-soft:#FBEFE7;
+    --teal:#12433f; --teal-soft:#EAF4F1; --amber:#8a5a00; --amber-soft:#FDF3DF;
+    --cream:#FAF7F2; --line:#e8e4dd; --card:#fff;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:#f3efe9;color:var(--ink);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+       line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 14px 64px}
+
+  /* ── header ── */
+  header{position:relative;overflow:hidden;background:#0f1c22;color:#fff;margin:0 -14px;padding:32px 22px 24px}
+  header img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  header .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,16,20,.4),rgba(9,16,20,.75) 46%,rgba(9,16,20,.96))}
+  header .in{position:relative;max-width:788px;margin:0 auto}
+  .kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#ffb08a;font-weight:700}
+  h1{font-size:29px;line-height:1.1;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{display:block;font-size:15px;color:#ffb08a;letter-spacing:.06em;margin-top:7px;font-weight:600}
+  header p{margin:0;color:#d9d5d0;font-size:13.5px}
+  .route{display:grid;grid-template-columns:1fr;gap:7px;margin-top:18px}
+  .route div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:9px;
+             padding:8px 11px;font-size:13px;display:flex;justify-content:space-between;gap:10px}
+  .route b{font-weight:700}
+  .route small{color:#c3bdb5;font-size:12px}
+
+  /* ── generic ── */
+  h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:30px 0 10px;font-weight:800}
+  .note{font-size:12px;color:var(--muted);margin:-4px 0 12px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px 14px;margin-bottom:10px}
+  .card.mine{border-color:#f0c9b3;box-shadow:0 0 0 3px #fdf3ee}
+
+  /* ── identity bar ── */
+  .who{display:flex;align-items:center;gap:9px;background:var(--accent-soft);border:1px solid #f2d8c9;
+       border-radius:11px;padding:9px 12px;margin-top:16px;font-size:13px}
+  .who label{color:#8a3b12;font-weight:700;white-space:nowrap}
+  .who input{flex:1;min-width:0;border:1px solid #e6cbb9;background:#fff;border-radius:8px;padding:6px 9px;font-size:13.5px;font-family:inherit;color:var(--ink)}
+  .who input:focus{outline:2px solid #f0b795;outline-offset:1px}
+
+  /* ── day chips ── */
+  .days{display:flex;gap:7px;overflow-x:auto;padding:2px 0 6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .days::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;
+        padding:7px 13px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;white-space:nowrap}
+  .chip b{font-weight:800}
+  .chip small{color:var(--muted);font-weight:600;margin-left:3px}
+  .chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .chip[aria-pressed="true"] small{color:#ffd9c6}
+  .chip .n{display:inline-block;margin-left:5px;background:#f0ece5;color:#6b655e;border-radius:999px;padding:0 6px;font-size:11px}
+  .chip[aria-pressed="true"] .n{background:rgba(255,255,255,.22);color:#fff}
+
+  /* ── place card ── */
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .nm{font-size:16px;font-weight:800;line-height:1.2;margin:0}
+  .nm .cn{display:block;font-size:12.5px;font-weight:700;color:var(--accent);letter-spacing:.03em;margin-top:2px}
+  .tag{flex:0 0 auto;font-size:11px;color:#6b655e;background:#f4f1ec;border-radius:999px;padding:3px 8px;white-space:nowrap}
+  .why{font-size:13.5px;color:#3a3631;margin:8px 0 0}
+  .meta{font-size:11.5px;color:var(--muted);margin-top:7px;letter-spacing:.02em}
+  .meta .dot{margin:0 5px;opacity:.5}
+
+  .votes{display:flex;gap:6px;margin-top:11px;flex-wrap:wrap}
+  .v{flex:1 1 0;min-width:78px;display:flex;flex-direction:column;align-items:center;gap:1px;
+     border:1px solid var(--line);background:#fcfbf9;border-radius:10px;padding:7px 4px;cursor:pointer;
+     font-family:inherit;font-size:11.5px;color:#4b463f;font-weight:700;transition:.12s}
+  .v b{font-size:15px;font-weight:800;color:var(--ink)}
+  .v:active{transform:scale(.98)}
+  .v.up[aria-pressed="true"]{background:var(--teal-soft);border-color:#9dc6bc;color:var(--teal)}
+  .v.up[aria-pressed="true"] b{color:var(--teal)}
+  .v.mid[aria-pressed="true"]{background:var(--amber-soft);border-color:#e3c584;color:var(--amber)}
+  .v.mid[aria-pressed="true"] b{color:var(--amber)}
+  .v.down[aria-pressed="true"]{background:#fdf0ed;border-color:#eab7a8;color:#a13511}
+  .v.down[aria-pressed="true"] b{color:#a13511}
+
+  .toolbar{display:flex;gap:8px;margin-top:8px;align-items:center;flex-wrap:wrap}
+  .cmt-btn{border:1px solid var(--line);background:#fff;border-radius:9px;padding:6px 11px;font-size:12px;
+           font-family:inherit;color:#4b463f;font-weight:600;cursor:pointer}
+  .cmt-btn .n{color:var(--muted);font-weight:700;margin-left:3px}
+  .assign{border:1px solid var(--line);background:#fff;border-radius:9px;padding:5px 8px;font-size:12px;
+          font-family:inherit;color:#4b463f;font-weight:600;max-width:52%}
+  .assign-label{font-size:12px;color:var(--muted);margin-left:auto}
+
+  .comments{margin-top:10px;border-top:1px dashed var(--line);padding-top:9px;display:none}
+  .comments.open{display:block}
+  .c{font-size:13px;margin-bottom:7px;line-height:1.45}
+  .c .a{font-weight:800;color:#2f2b27}
+  .c .t{color:#a29b93;font-size:11px;margin-left:5px}
+  .c p{margin:1px 0 0;color:#403b35;word-break:break-word}
+  .empty{font-size:12.5px;color:var(--muted);margin:2px 0 8px}
+  .cform{display:flex;gap:6px;margin-top:4px}
+  .cform input{flex:1;min-width:0;border:1px solid var(--line);border-radius:9px;padding:8px 10px;
+               font-size:13.5px;font-family:inherit;background:#fcfbf9}
+  .cform button{border:none;background:var(--accent);color:#fff;border-radius:9px;padding:0 14px;
+                font-size:13px;font-weight:700;font-family:inherit;cursor:pointer}
+
+  /* ── add place ── */
+  .addbtn{display:block;width:100%;margin:14px 0 0;border:1.5px dashed #d9b79f;background:#fff;
+          color:var(--accent);border-radius:12px;padding:13px;font-size:14px;font-weight:800;font-family:inherit;cursor:pointer}
+  form.add{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px;margin-top:10px;display:none}
+  form.add.open{display:block}
+  form.add h3{margin:0 0 10px;font-size:14px;font-weight:800;color:var(--accent)}
+  .f{margin-bottom:9px}
+  .f label{display:block;font-size:11.5px;font-weight:700;color:#6b655e;margin-bottom:3px;letter-spacing:.03em}
+  .f input,.f select,.f textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:9px 10px;
+        font-size:14px;font-family:inherit;background:#fcfbf9;color:var(--ink)}
+  .f textarea{resize:vertical;min-height:60px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  form.add button[type=submit]{width:100%;border:none;background:var(--accent);color:#fff;border-radius:10px;
+        padding:12px;font-size:14px;font-weight:800;font-family:inherit;cursor:pointer;margin-top:4px}
+
+  /* ── budget ── */
+  table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th{text-align:left;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);
+     border-bottom:1.5px solid #ddd7ce;padding:8px 9px;font-weight:700;background:#fbf9f6}
+  td{padding:7px 9px;border-bottom:1px solid #f1eee9;vertical-align:top}
+  td.r,th.r{text-align:right;white-space:nowrap}
+  tr.sub td{background:var(--cream);font-weight:800;font-size:11.5px;letter-spacing:.05em;color:#6b655e}
+  tr.total td{border-top:1.5px solid #ddd7ce;border-bottom:none;font-weight:800;background:#FAF7F2;font-size:13px}
+  .muted{color:var(--muted)}
+
+  .box{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:9px;
+       padding:12px 14px;font-size:13.5px;margin-bottom:9px}
+  .box b{color:var(--accent)}
+  .box.teal{border-left-color:var(--teal);background:#f4faf8}
+  .box.teal b{color:var(--teal)}
+
+  footer{font-size:11.5px;color:var(--muted);margin-top:28px;border-top:1px solid var(--line);padding-top:14px;line-height:1.6}
+  footer a{color:var(--muted)}
+
+  .status{font-size:11.5px;color:#8a5a00;background:var(--amber-soft);border-radius:8px;padding:7px 10px;margin:10px 0 0;display:none}
+  .status.show{display:block}
+  .dhead{display:flex;align-items:baseline;gap:8px;margin:18px 0 8px;padding-top:6px}
+  .dhead b{font-size:14px;font-weight:800;letter-spacing:-.01em}
+  .dhead small{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .flash{position:fixed;left:50%;transform:translateX(-50%);bottom:22px;background:#12433f;color:#fff;
+         font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:50}
+  .flash.on{opacity:1}
+  @media(min-width:560px){ h1{font-size:34px} .route{grid-template-columns:repeat(3,1fr)} }
 </style>
 </head>
 <body>
+
 <header>
   <img class="bg" src="hero.jpg" alt="">
   <div class="shade"></div>
   <div class="in">
     <div class="kicker">Trip plan · 9 days · 8 people</div>
-    <h1>Beijing × Chongli<span>北京 × 崇礼 · 2–10 Dec 2026</span></h1>
-    <p>Ages 23–30 · 3 ski sessions · 4 rooms</p>
-    <div class="stats">
-      <div><b>2–5 Dec</b><small>Beijing · Sanlitun</small></div>
-      <div><b>6–8 Dec</b><small>Chongli · on the mountain</small></div>
-      <div><b>8–10 Dec</b><small>Beijing · Dongcheng</small></div>
-      <div><b>RM 4,835</b><small>Per person · no flights</small></div>
+    <h1>北京 × 崇礼<span>2–10 December 2026</span></h1>
+    <p>8 个人 · 4 间双人房 · 3 场滑雪 · 全程含地面费用约 RM 4,835/人</p>
+    <div class="route">
+      <div><b>2–5 Dec · 北京</b><small>住三里屯</small></div>
+      <div><b>6–8 Dec · 崇礼</b><small>滑雪小镇</small></div>
+      <div><b>8–10 Dec · 北京</b><small>住东城</small></div>
     </div>
-    <a class="btn" href="Beijing-Chongli_2-10-Dec-2026.pdf" download>⬇︎ Download the PDF (4 pages)</a>
-    <p class="note">Or just scroll — every page is below.</p>
   </div>
 </header>
 
 <div class="wrap">
 
-  <h2>Day by day</h2>
-  <div class="days">
-    <div class="day"><div class="d">Wed 2</div><div class="t"><b>Land · 三里屯 + SKP-S</b><span>Duck dinner, Sanlitun bars</span></div></div>
-    <div class="day"><div class="d">Thu 3</div><div class="t"><b>北京环球影城</b><span>Universal all day · 簋街 late supper</span></div></div>
-    <div class="day"><div class="d">Fri 4</div><div class="t"><b>故宫 + 景山</b><span>Weekday palace · 什刹海 hutongs · hotpot · 剧本杀</span></div></div>
-    <div class="day"><div class="d">Sat 5</div><div class="t"><b>慕田峪长城 + 798</b><span>Cable car up, toboggan down · art district by dusk</span></div></div>
-    <div class="day"><div class="d">Sun 6</div><div class="t"><b>Train to 崇礼</b><span>08:00 Qinghe → Taizicheng · check in · ski 4 h</span></div></div>
-    <div class="day"><div class="d">Mon 7</div><div class="t"><b>Full ski day</b><span>Morning lesson · night ski at 云顶</span></div></div>
-    <div class="day"><div class="d">Tue 8</div><div class="t"><b>Ski, then back to Beijing</b><span>Morning session · 王府井 night</span></div></div>
-    <div class="day"><div class="d">Wed 9</div><div class="t"><b>雍和宫 + 五道营</b><span>Escape room · farewell dinner</span></div></div>
-    <div class="day"><div class="d">Thu 10</div><div class="t"><b>天坛</b><span>Airport by 13:00</span></div></div>
+  <div class="who">
+    <label for="who">你的名字</label>
+    <input id="who" placeholder="写个名字，投票和留言会显示" maxlength="20" autocomplete="nickname">
   </div>
 
-  <h2>The plan, page by page</h2>
-  <p class="note" style="text-align:left;margin:-4px 0 12px">Tap any page to open it full size.</p>
-  <figure><a href="pages/page-1.jpg"><img src="pages/page-1.jpg" alt="Page 1 — overview and 9-day plan" loading="lazy"></a><figcaption>01 · Route, plan at a glance, why it is built this way</figcaption></figure>
-  <figure><a href="pages/page-2.jpg"><img src="pages/page-2.jpg" alt="Page 2 — four days in Beijing" loading="lazy"></a><figcaption>02 · Four days in the city — 4 spots, 9 photos</figcaption></figure>
-  <figure><a href="pages/page-3.jpg"><img src="pages/page-3.jpg" alt="Page 3 — hutongs and Chongli skiing" loading="lazy"></a><figcaption>03 · Hutongs, then the mountain — Chongli ski plan</figcaption></figure>
-  <figure><a href="pages/page-4.jpg"><img src="pages/page-4.jpg" alt="Page 4 — budget" loading="lazy"></a><figcaption>04 · Budget and checklist</figcaption></figure>
+  <h2>投票 + 排期</h2>
+  <p class="note">选一天 → 看那天的安排；👍 去 / 🤔 再看看 / 👎 不要去，投了随时可以改。每个地点右边可以把时间改到别天。</p>
 
-  <h2>Three things to lock in</h2>
-  <div class="box"><b>Hotels — now.</b> 4 twin rooms together, early December is still shoulder season.</div>
-  <div class="box"><b>Train tickets — 21–24 Nov.</b> Qinghe ↔ Taizicheng opens 15 days out, ¥74–99 second class.</div>
-  <div class="box teal"><b>故宫 tickets — 27 Nov, 07:00.</b> Released exactly 7 days ahead for 4 Dec. They sell out; passport number per person.</div>
+  <div class="days" id="days"></div>
+  <div class="status" id="status"></div>
 
-  <div class="box teal">Malaysian passports: <b>visa-free 30 days</b>. Set up Alipay + WeChat Pay with a foreign card before flying, and an eSIM that roams — Google / WhatsApp / IG are blocked on local Wi-Fi.</div>
+  <div id="list"></div>
+
+  <button class="addbtn" id="addToggle">＋ 加一个地点</button>
+  <form class="add" id="addForm">
+    <h3>加地点</h3>
+    <div class="f"><label for="fName">名字（英文 / 罗马字）</label>
+      <input id="fName" required maxlength="80" placeholder="e.g. Beihai Park"></div>
+    <div class="two">
+      <div class="f"><label for="fCn">中文名（可不填）</label><input id="fCn" maxlength="60" placeholder="北海公园"></div>
+      <div class="f"><label for="fArea">在哪</label><input id="fArea" maxlength="40" placeholder="北京 · 西城"></div>
+    </div>
+    <div class="two">
+      <div class="f"><label for="fDay">排在哪天</label><select id="fDay"></select></div>
+      <div class="f"><label for="fKind">类型</label>
+        <select id="fKind">
+          <option value="place">景点 / 地方</option>
+          <option value="food">吃</option>
+          <option value="activity">玩 / 体验</option>
+          <option value="transit">交通</option>
+        </select></div>
+    </div>
+    <div class="f"><label for="fWhy">为什么想去（一句话）</label>
+      <textarea id="fWhy" maxlength="400" placeholder="看到人家拍的夜景很好看，想去"></textarea></div>
+    <button type="submit">加进去</button>
+  </form>
+
+  <h2>预算（每人）</h2>
+  <p class="note">8 人 · 4 间双人房 · 不含机票和购物</p>
+  <table>
+    <tr><th>项目</th><th class="r">CNY</th><th class="r">RM</th></tr>
+    <tr class="sub"><td colspan="3">住 · 8 晚</td></tr>
+    <tr><td>北京 × 6 晚<span class="muted"> · 三里屯 / 东城 4 星精品，约 ¥700 一间</span></td><td class="r">2,100</td><td class="r">1,283</td></tr>
+    <tr><td>崇礼 × 2 晚<span class="muted"> · ski-in / ski-out，约 ¥1,000 一间</span></td><td class="r">1,000</td><td class="r">611</td></tr>
+    <tr class="sub"><td colspan="3">交通</td></tr>
+    <tr><td>机场 + 市内<span class="muted"> · DiDi、地铁</span></td><td class="r">400</td><td class="r">245</td></tr>
+    <tr><td>高铁 × 2<span class="muted"> · 清河 ↔ 太子城 二等座</span></td><td class="r">180</td><td class="r">110</td></tr>
+    <tr><td>长城包车<span class="muted"> · ¥900/天，8 人分摊</span></td><td class="r">115</td><td class="r">70</td></tr>
+    <tr class="sub"><td colspan="3">门票</td></tr>
+    <tr><td>环球影城<span class="muted"> · 平日一日票</span></td><td class="r">418</td><td class="r">255</td></tr>
+    <tr><td>慕田峪<span class="muted"> · 门票 + 摆渡 + 缆车 + 滑道</span></td><td class="r">295</td><td class="r">180</td></tr>
+    <tr><td>故宫 + 景山 + 雍和宫 + 天坛<span class="muted"> · 冬季票价</span></td><td class="r">101</td><td class="r">62</td></tr>
+    <tr><td>剧本杀 / 脱口秀<span class="muted"> · 一个晚上</span></td><td class="r">150</td><td class="r">92</td></tr>
+    <tr class="sub"><td colspan="3">雪</td></tr>
+    <tr><td>3 场含装备<span class="muted"> · 周末 + 2 个平日：4h / 全天 / 4h</span></td><td class="r">1,104</td><td class="r">675</td></tr>
+    <tr><td>团课 2 小时<span class="muted"> · 新手</span></td><td class="r">350</td><td class="r">214</td></tr>
+    <tr class="sub"><td colspan="3">吃</td></tr>
+    <tr><td>9 天<span class="muted"> · 约 ¥200/天：随便吃 + 2 顿正式 + 火锅</span></td><td class="r">1,800</td><td class="r">1,100</td></tr>
+    <tr class="total"><td>每人合计</td><td class="r">7,913</td><td class="r">4,835</td></tr>
+  </table>
+
+  <h2>三个不能拖的日期</h2>
+  <div class="box"><b>现在：酒店。</b>4 间房要在一起的，12 月初还是淡季。</div>
+  <div class="box"><b>21–24 Nov：高铁票。</b>清河 ↔ 太子城 提前 15 天开卖，二等座 ¥74–99。</div>
+  <div class="box teal"><b>27 Nov 07:00：故宫门票。</b>只提前 7 天放 4 Dec 的票，会卖完，每人要护照号。</div>
+  <div class="box teal">马来西亚护照 <b>免签 30 天</b>。出发前装好支付宝 / 微信支付绑外国卡，再买一张能漫游的 eSIM——本地 Wi-Fi 上不了 Google、WhatsApp、IG。</div>
+
+  <p class="note" style="margin-top:14px">完整行程 PDF：<a href="Beijing-Chongli_2-10-Dec-2026.pdf">下载 4 页</a></p>
 
   <footer>
-    Lift and attraction prices are the published 2025–26 boards; expect a small rise for 2026–27 — confirm with each resort before booking.
-    Hotels, food and city transport are planning estimates. Photos from Wikimedia Commons (CC), illustrative of the area, not the exact hotel booked.
-    Exchange rate 1 CNY = RM 0.611 (18 Nov 2026).
+    雪票和门票价格按 2025–26 官方价目，2026–27 会小涨，订之前跟雪场确认。
+    酒店、吃饭、市内交通是估算。汇率 1 CNY = RM 0.611（2026-11-18）。
+    照片来自 Wikimedia Commons（CC），示意该地区，不一定是实际订的那家。
   </footer>
 </div>
+
+<div class="flash" id="flash"></div>
+
+<script>
+const SB_URL = 'https://pjcxokexcoigqbobyhmv.supabase.co';
+const SB_KEY = 'sb_publishable__PcWd0bOjWwa0TGH04TVzw_0ZUP8WNk';
+
+const KIND = {place:'景点', food:'吃', activity:'玩', transit:'交通'};
+const VOTE_LABEL = {1:'去', 0:'再看看', '-1':'不要去'};
+
+const $ = (s, r = document) => r.querySelector(s);
+const el = (t, cls, txt) => { const n = document.createElement(t); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+
+let DAYS = [], PLACES = [], VOTES = [], COMMENTS = [], BACKEND = false, DAY = 'all';
+
+/* ── identity ───────────────────────────────────────────────────────────── */
+function voterId() {
+  let v = localStorage.getItem('trip_voter');
+  if (!v) { v = crypto.randomUUID(); localStorage.setItem('trip_voter', v); }
+  return v;
+}
+function myName() { return (localStorage.getItem('trip_name') || '').trim(); }
+const whoInput = $('#who');
+whoInput.value = myName();
+whoInput.addEventListener('change', () => localStorage.setItem('trip_name', whoInput.value.trim().slice(0, 20)));
+
+/* ── api ────────────────────────────────────────────────────────────────── */
+async function api(path, opts = {}) {
+  const res = await fetch(SB_URL + '/rest/v1/' + path, {
+    ...opts,
+    headers: {
+      apikey: SB_KEY,
+      'Content-Type': 'application/json',
+      ...(opts.headers || {})
+    }
+  });
+  const text = await res.text();
+  if (!res.ok) throw new Error(res.status + ' ' + text.slice(0, 200));
+  return text ? JSON.parse(text) : null;
+}
+
+function flash(msg) {
+  const f = $('#flash'); f.textContent = msg; f.classList.add('on');
+  clearTimeout(f._t); f._t = setTimeout(() => f.classList.remove('on'), 2200);
+}
+
+/* ── vote helpers ───────────────────────────────────────────────────────── */
+const tally = (pid) => {
+  const out = {1: 0, 0: 0, '-1': 0};
+  VOTES.forEach(v => { if (v.place_id === pid) out[v.value] = (out[v.value] || 0) + 1; });
+  return out;
+};
+const myVote = (pid) => {
+  const v = VOTES.find(v => v.place_id === pid && v.voter_id === voterId());
+  return v ? v.value : null;
+};
+const commentsOf = (pid) => COMMENTS.filter(c => c.place_id === pid);
+
+/* ── render ────────────────────────────────────────────────────────────── */
+function renderDays() {
+  const box = $('#days'); box.innerHTML = '';
+  const all = el('button', 'chip'); all.innerHTML = '全部 <span class="n"></span>';
+  all.setAttribute('aria-pressed', String(DAY === 'all'));
+  all.onclick = () => { DAY = 'all'; render(); };
+  box.appendChild(all);
+  DAYS.forEach(d => {
+    const n = PLACES.filter(p => p.day === d.d).length;
+    const b = el('button', 'chip');
+    b.innerHTML = '<b>' + d.d + '</b> <small>' + d.zh + '</small>' + (n ? '<span class="n">' + n + '</span>' : '');
+    b.setAttribute('aria-pressed', String(DAY === d.d));
+    b.onclick = () => { DAY = d.d; render(); };
+    box.appendChild(b);
+  });
+  $('#days .chip .n').textContent = PLACES.length;
+}
+
+function card(p) {
+  const c = el('article', 'card');
+  let pid = p.id || 'seed:' + p.slug;
+
+  const top = el('div', 'top');
+  const ttl = el('h3', 'nm');
+  ttl.appendChild(document.createTextNode(p.name));
+  if (p.name_cn) ttl.appendChild(el('span', 'cn', p.name_cn));
+  top.appendChild(ttl);
+  if (p.area) top.appendChild(el('span', 'tag', p.area));
+  c.appendChild(top);
+
+  if (p.why) c.appendChild(el('p', 'why', p.why));
+
+  const meta = el('div', 'meta');
+  const bits = [];
+  const bitsdd = DAYS.find(d => d.d === p.day);
+  if (bitsdd) bits.push('D' + p.day + ' · ' + bitsdd.zh);
+  bits.push(KIND[p.kind] || '景点');
+  if (p.cost) bits.push(p.cost);
+  if (p.created_by) bits.push('by ' + p.created_by);
+  meta.textContent = bits.filter(Boolean).join('  ·  ');
+  c.appendChild(meta);
+
+  /* votes */
+  const t = p.id ? tally(p.id) : {1: 0, 0: 0, '-1': 0};
+  const mine = p.id ? myVote(p.id) : null;
+  const votes = el('div', 'votes');
+  [[1, 'up', '👍 去'], [0, 'mid', '🤔 再看看'], [-1, 'down', '👎 不要去']].forEach(([val, cls, label]) => {
+    const b = el('button', 'v ' + cls);
+    b.innerHTML = label + '<b>' + (t[val] || 0) + '</b>';
+    b.setAttribute('aria-pressed', String(mine === val));
+    b.onclick = () => vote(p, val);
+    votes.appendChild(b);
+  });
+  c.appendChild(votes);
+
+  /* toolbar */
+  const tb = el('div', 'toolbar');
+  const cBtn = el('button', 'cmt-btn');
+  const cc = p.id ? commentsOf(p.id).length : 0;
+  cBtn.innerHTML = '💬 留言<span class="n">' + (cc || '') + '</span>';
+  tb.appendChild(cBtn);
+
+  const sel = el('select', 'assign');
+  const opts = [['', '未定']].concat(DAYS.map(d => [d.d, d.d + ' ' + d.en + ' ' + d.zh]));
+  opts.forEach(([v, label]) => {
+    const o = el('option', null, label); o.value = v;
+    if (String(p.day || '') === String(v || '')) o.selected = true;
+    sel.appendChild(o);
+  });
+  sel.onchange = () => assignDay(p, sel.value);
+  tb.appendChild(sel);
+  c.appendChild(tb);
+
+  /* comments */
+  const cm = el('div', 'comments');
+  const list = commentsOf(p.id);
+  if (!list.length) cm.appendChild(el('div', 'empty', '还没有留言'));
+  list.forEach(x => {
+    const d = el('div', 'c');
+    const head = el('div');
+    head.appendChild(el('span', 'a', x.author || '有人'));
+    head.appendChild(el('span', 't', new Date(x.created_at).toLocaleString('zh-CN', {month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'})));
+    d.appendChild(head);
+    d.appendChild(el('p', null, x.body));
+    cm.appendChild(d);
+  });
+  const form = el('div', 'cform');
+  const inp = el('input');
+  inp.placeholder = p.id ? '说点什么…' : '留言要等投票接通后才能用';
+  inp.maxLength = 600;
+  inp.disabled = !p.id;
+  const send = el('button', null, '发');
+  const doSend = () => {
+    const body = inp.value.trim();
+    if (!body) return;
+    addComment(p, body, inp, send);
+  };
+  send.onclick = doSend;
+  inp.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); doSend(); } });
+  form.appendChild(inp); form.appendChild(send);
+  cm.appendChild(form);
+  c.appendChild(cm);
+
+  cBtn.onclick = () => {
+    cm.classList.toggle('open');
+    if (cm.classList.contains('open') && p.id) inp.focus();
+  };
+
+  if (mine === 1) c.classList.add('mine');
+  return c;
+}
+
+function render() {
+  renderDays();
+  const list = $('#list'); list.innerHTML = '';
+
+  let shown = PLACES.slice();
+  if (DAY !== 'all') shown = shown.filter(p => p.day === DAY);
+  shown.sort((a, b) => (a.day || 99) - (b.day || 99) || (a.created_at || '').localeCompare(b.created_at || ''));
+
+  if (!shown.length) {
+    list.appendChild(el('p', 'note', '这一天还没有地点，往下滑挑一个排过来，或按「加一个地点」。'));
+  }
+
+  if (DAY === 'all') {
+    let lastDay = undefined;
+    shown.forEach(p => {
+      const d = p.day == null ? null : p.day;
+      if (d !== lastDay) {
+        lastDay = d;
+        const info = DAYS.find(x => x.d === d);
+        const head = el('div', 'dhead');
+        head.appendChild(el('b', null, d == null ? '未定' : d + ' 号 · ' + info.en + ' ' + info.zh));
+        head.appendChild(el('small', null, d == null ? '还没排日期' : info.zh === '周六' || info.zh === '周日' ? '周末' : '平日'));
+        list.appendChild(head);
+      }
+      list.appendChild(card(p));
+    });
+  } else {
+    shown.forEach(p => list.appendChild(card(p)));
+  }
+
+  if (DAY !== 'all') {
+    const rest = PLACES.filter(p => p.day !== DAY);
+    if (rest.length) {
+      list.appendChild(el('h2', null, '其他天的地方 · 按右边可以排到 ' + DAY + ' 号'));
+      rest.sort((a, b) => (a.day || 99) - (b.day || 99));
+      rest.forEach(p => list.appendChild(card(p)));
+    }
+  }
+  $('#status').classList.toggle('show', !BACKEND);
+  $('#status').textContent = BACKEND
+    ? ''
+    : '目前只能看，还不能存投票 —— 后端还没接上（一次性 SQL 还没跑）。';
+}
+
+/* ── actions ────────────────────────────────────────────────────────────── */
+async function vote(p, val) {
+  if (!p.id) { flash('投票还没接上，先跑一次 SQL'); return; }
+  const uid = voterId();
+  const cur = myVote(p.id);
+  const next = cur === val ? null : val;
+  try {
+    if (next === null) {
+      await api('trip_votes?place_id=eq.' + p.id + '&voter_id=eq.' + encodeURIComponent(uid), {method: 'DELETE'});
+      VOTES = VOTES.filter(v => !(v.place_id === p.id && v.voter_id === uid));
+    } else {
+      const rows = await api('trip_votes?on_conflict=place_id,voter_id', {
+        method: 'POST',
+        headers: {'Prefer': 'resolution=merge-duplicates,return=representation'},
+        body: JSON.stringify({place_id: p.id, voter_id: uid, value: next})
+      });
+      VOTES = VOTES.filter(v => !(v.place_id === p.id && v.voter_id === uid));
+      VOTES.push(...rows);
+    }
+    render();
+  } catch (e) { flash('存不到，再试一次'); console.error(e); }
+}
+
+async function assignDay(p, val) {
+  if (!p.id) { flash('还没接上后端'); return; }
+  const day = val === '' ? null : Number(val);
+  try {
+    await api('trip_places?id=eq.' + p.id, {method: 'PATCH', body: JSON.stringify({day})});
+    p.day = day;
+    flash(day ? '排到 ' + day + ' 号了' : '改成未定');
+    render();
+  } catch (e) { flash('改不到，再试一次'); console.error(e); }
+}
+
+async function addComment(p, body, inp, btn) {
+  const name = myName();
+  if (!name) { flash('先在上面写个名字'); whoInput.focus(); return; }
+  btn.disabled = true;
+  try {
+    const rows = await api('trip_comments', {
+      method: 'POST',
+      headers: {'Prefer': 'return=representation'},
+      body: JSON.stringify({place_id: p.id, voter_id: voterId(), author: name, body})
+    });
+    COMMENTS.push(rows[0]);
+    inp.value = '';
+    render();
+    flash('留言发了');
+  } catch (e) { flash('发不出，再试一次'); console.error(e); }
+  btn.disabled = false;
+}
+
+/* ── add place ──────────────────────────────────────────────────────────── */
+$('#addToggle').onclick = () => {
+  const f = $('#addForm');
+  f.classList.toggle('open');
+  if (f.classList.contains('open')) { $('#fName').focus(); f.scrollIntoView({behavior: 'smooth', block: 'center'}); }
+};
+
+$('#addForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const name = $('#fName').value.trim();
+  if (!name) return;
+  const payload = {
+    name,
+    name_cn: $('#fCn').value.trim() || null,
+    area: $('#fArea').value.trim() || null,
+    why: $('#fWhy').value.trim() || null,
+    kind: $('#fKind').value,
+    day: $('#fDay').value === '' ? null : Number($('#fDay').value),
+    created_by: myName() || null
+  };
+  try {
+    const rows = await api('trip_places', {
+      method: 'POST',
+      headers: {'Prefer': 'return=representation'},
+      body: JSON.stringify(payload)
+    });
+    PLACES.push(rows[0]);
+    if (payload.day) DAY = payload.day;
+    e.target.reset();
+    $('#fDay').value = DAY === 'all' ? '' : DAY;
+    $('#addForm').classList.remove('open');
+    render();
+    flash('加了：' + name);
+  } catch (err) { flash('加不到，再试一次'); console.error(err); }
+});
+
+/* ── boot ───────────────────────────────────────────────────────────────── */
+(async function boot() {
+  const local = await fetch('places.json').then(r => r.json()).catch(() => ({days: [], places: []}));
+  DAYS = local.days;
+  PLACES = local.places.map(p => ({...p}));
+
+  const daySel = $('#fDay');
+  daySel.appendChild(el('option', null, '未定')).value = '';
+  DAYS.forEach(d => { const o = el('option', null, d.d + ' ' + d.en + ' ' + d.zh); o.value = d.d; daySel.appendChild(o); });
+
+  try {
+    const [places, votes, comments] = await Promise.all([
+      api('trip_places?select=*&order=day.asc.nullslast,created_at.asc'),
+      api('trip_votes?select=place_id,voter_id,value'),
+      api('trip_comments?select=*&order=created_at.asc')
+    ]);
+    if (places && places.length) {
+      PLACES = places.map(p => ({...p}));
+      BACKEND = true;
+    }
+    VOTES = votes || [];
+    COMMENTS = comments || [];
+  } catch (e) {
+    console.warn('backend not ready', e);
+    BACKEND = false;
+  }
+  render();
+  if (DAY === 'all') {
+    const d = new Date().getDate();
+    if (DAYS.some(x => x.d === d)) { DAY = d; renderDays(); }
+  }
+})();
+</script>
 </body>
 </html>
