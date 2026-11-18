@@ -64,6 +64,14 @@
 
   /* ── place card ── */
   .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .ph{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:-2px -2px 10px}
+  .ph.one{grid-template-columns:1fr}
+  .ph a{display:block;border-radius:10px;overflow:hidden;background:#efece6}
+  .ph img{display:block;width:100%;height:120px;object-fit:cover}
+  .ph.one img{height:190px}
+  .ph:not(.one) a:last-child:first-child{grid-column:span 2}
+  .cap{font-size:11px;color:var(--muted);line-height:1.45;margin:-3px 0 10px}
+  @media(min-width:560px){ .ph img{height:158px} .ph.one img{height:250px} }
   .nm{font-size:16px;font-weight:800;line-height:1.2;margin:0}
   .nm .cn{display:block;font-size:12.5px;font-weight:700;color:var(--accent);letter-spacing:.03em;margin-top:2px}
   .tag{flex:0 0 auto;font-size:11px;color:#6b655e;background:#f4f1ec;border-radius:999px;padding:3px 8px;white-space:nowrap}
@@ -129,6 +137,11 @@
   tr.sub td{background:var(--cream);font-weight:800;font-size:11.5px;letter-spacing:.05em;color:#6b655e}
   tr.total td{border-top:1.5px solid #ddd7ce;border-bottom:none;font-weight:800;background:#FAF7F2;font-size:13px}
   .muted{color:var(--muted)}
+
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:4px 0 0}
+  .strip a{display:block;border-radius:10px;overflow:hidden;background:#efece6}
+  .strip img{display:block;width:100%;height:84px;object-fit:cover}
+  @media(min-width:560px){ .strip img{height:130px} }
 
   .box{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:9px;
        padding:12px 14px;font-size:13.5px;margin-bottom:9px}
@@ -206,6 +219,24 @@
     <button type="submit">加进去</button>
   </form>
 
+  <h2>雪场怎么选</h2>
+  <div class="box"><b>太舞</b> 一行人水平差得多、也想有点小镇生活的话住这里 · <b>云顶</b> 有夜场、缆车带加热（¥278–588） · <b>万龙</b> 雪道最陡 · <b>富龙</b> 最便宜，在县城里。</div>
+  <div class="box teal"><b>两件容易忘的事：</b>保险要含冬季运动；租来的雪服里面一定穿保暖层——天黑之后山上 −18°C。</div>
+
+  <h2>为什么这样排</h2>
+  <div class="box"><b>故宫放周五，不放周末。</b>同一个票价，周六的人流差不多翻一倍——平日去才是重点。</div>
+  <div class="box"><b>主题乐园放周四。</b>票价便宜一档、排队短，闭园还有城堡灯光秀。</div>
+  <div class="box"><b>滑雪放中间。</b>第 5 天腿力最好，回来还有两个北京晚上当缓冲，万一高铁被雪延误也不慌。</div>
+  <div class="box"><b>12 月初还是淡季。</b>缆车几乎不排队、房价低；少数上段雪道可能还没开。</div>
+  <div class="box teal"><b>预算口径。</b>每人约 RM 4,800 是「落地之后全部」——房间、高铁、门票、3 场滑雪、所有吃饭。不含机票，明细在上面的表。</div>
+
+  <div class="strip">
+    <a href="img/mutianyu-2.jpg" target="_blank" rel="noopener"><img src="img/mutianyu-2.jpg" alt="慕田峪烽火台" loading="lazy"></a>
+    <a href="img/gugong-2.jpg" target="_blank" rel="noopener"><img src="img/gugong-2.jpg" alt="故宫庭院" loading="lazy"></a>
+    <a href="img/universal-2.jpg" target="_blank" rel="noopener"><img src="img/universal-2.jpg" alt="环球影城过山车" loading="lazy"></a>
+  </div>
+  <div class="cap" style="margin:2px 0 6px">慕田峪 · 故宫 · 环球影城</div>
+
   <h2>预算（每人）</h2>
   <p class="note">8 人 · 4 间双人房 · 不含机票和购物</p>
   <table>
@@ -229,6 +260,7 @@
     <tr><td>9 天<span class="muted"> · 约 ¥200/天：随便吃 + 2 顿正式 + 火锅</span></td><td class="r">1,800</td><td class="r">1,100</td></tr>
     <tr class="total"><td>每人合计</td><td class="r">7,913</td><td class="r">4,835</td></tr>
   </table>
+  <div class="box" style="margin-top:10px"><b>想省 / 想升级：</b>换成富龙、不上团课可以压到约 ¥6,900；加快速通行证、夜场和第二堂课，会到约 ¥9,050。</div>
 
   <h2>三个不能拖的日期</h2>
   <div class="box"><b>现在：酒店。</b>4 间房要在一起的，12 月初还是淡季。</div>
@@ -323,6 +355,20 @@ function renderDays() {
 function card(p) {
   const c = el('article', 'card');
   let pid = p.id || 'seed:' + p.slug;
+
+  if (p.img && p.img.length) {
+    const g = el('div', 'ph' + (p.img.length === 1 ? ' one' : ''));
+    p.img.forEach((f, i) => {
+      const a = el('a');
+      a.href = 'img/' + f; a.target = '_blank'; a.rel = 'noopener';
+      const im = el('img');
+      im.src = 'img/' + f; im.loading = 'lazy'; im.decoding = 'async';
+      im.alt = p.name + ' 照片 ' + (i + 1);
+      a.appendChild(im); g.appendChild(a);
+    });
+    c.appendChild(g);
+    if (p.cap) c.appendChild(el('div', 'cap', p.cap));
+  }
 
   const top = el('div', 'top');
   const ttl = el('h3', 'nm');
