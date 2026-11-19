@@ -290,6 +290,7 @@ const $ = (s, r = document) => r.querySelector(s);
 const el = (t, cls, txt) => { const n = document.createElement(t); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
 
 let DAYS = [], PLACES = [], VOTES = [], COMMENTS = [], BACKEND = false, DAY = 'all';
+const ORDER = new Map();   // plan order, so same-day cards never shuffle
 
 /* ── identity ───────────────────────────────────────────────────────────── */
 function voterId() {
@@ -333,6 +334,7 @@ const myVote = (pid) => {
   return v ? v.value : null;
 };
 const commentsOf = (pid) => COMMENTS.filter(c => c.place_id === pid);
+const rank = (p) => ORDER.has(p.slug) ? ORDER.get(p.slug) : 900;
 
 /* ── render ────────────────────────────────────────────────────────────── */
 function renderDays() {
@@ -466,7 +468,7 @@ function render() {
 
   let shown = PLACES.slice();
   if (DAY !== 'all') shown = shown.filter(p => p.day === DAY);
-  shown.sort((a, b) => (a.day || 99) - (b.day || 99) || (a.created_at || '').localeCompare(b.created_at || ''));
+  shown.sort((a, b) => (a.day ?? 99) - (b.day ?? 99) || rank(a) - rank(b) || (a.created_at || '').localeCompare(b.created_at || ''));
 
   if (!shown.length) {
     list.appendChild(el('p', 'note', '这一天还没有地点，往下滑挑一个排过来，或按「加一个地点」。'));
@@ -494,7 +496,7 @@ function render() {
     const rest = PLACES.filter(p => p.day !== DAY);
     if (rest.length) {
       list.appendChild(el('h2', null, '其他天的地方 · 按右边可以排到 ' + DAY + ' 号'));
-      rest.sort((a, b) => (a.day || 99) - (b.day || 99));
+      rest.sort((a, b) => (a.day ?? 99) - (b.day ?? 99) || rank(a) - rank(b));
       rest.forEach(p => list.appendChild(card(p)));
     }
   }
@@ -597,6 +599,7 @@ $('#addForm').addEventListener('submit', async e => {
   const local = await fetch('places.json').then(r => r.json()).catch(() => ({days: [], places: []}));
   DAYS = local.days;
   PLACES = local.places.map(p => ({...p}));
+  local.places.forEach((p, i) => ORDER.set(p.slug, i));
 
   const daySel = $('#fDay');
   daySel.appendChild(el('option', null, '未定')).value = '';
